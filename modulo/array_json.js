@@ -123,3 +123,106 @@ console.log(filtrarProduto('Mouse'));
 // percorrendoArray();
 
 // introducaoArray();
+
+
+
+const manipulandoArryJson = function(){
+   
+// [] = estrutura array
+// {} = estrutura JSON {atributos: valor}
+
+// criando objetos JSON
+let contato = {nome: 'José da Silva', telefone: '1222677', gmail: 'José@gmail.com'}
+let contato2 = {nome: 'Maria da Silva', telefone: '1277', gmail: 'Maria@gmail.com'}
+let contato3 = {nome: 'João da Silva', telefone: '127755', gmail: 'João@gmail.com'}
+
+// criando um array com dados Json
+let arrayContatos = [contato, contato2, contato3];
+// adicionando elementos individuais nos obj JSON 
+contato.celular = '887997';
+// console.log (arrayContatos);
+
+
+//  console.log(arrayContatos[1].nome);
+  arrayContatos.forEach(function(dadosContato){
+   console.log('Nome: ' + dadosContato.nome);
+   console.log('Gmail: ' + dadosContato.gmail);
+   console.log('Telefone: ' + dadosContato.telefone);
+  //   tratamentos de dados para quando não houver conteúdo 
+  if (dadosContato.celular != undefined);
+  console.log('Celular: ' + dadosContato.celular);
+   console.log('************************************************** \n')  })
+
+}
+
+// manipulandoArryJson();
+
+
+const cadastrarProdutos = function(){
+   let listaDeMarcas= [
+      {id: 1, nome_marca: 'Dell'},
+      {id: 2, nome_marca: 'Apple'},
+      {id: 3, nome_marca: 'Lenovo'},
+      {id: 4, nome_marca: 'Positivo'},
+      {id: 5, nome_marca: 'Razer '},
+      {id: 6, nome_marca: 'Logitech'},
+      {id: 7, nome_marca: 'Multilaser'}
+
+   ];
+   let listaDeCategorias = [
+      {id: 1, nome_categoria: 'Periferico', descricao_categoria: 'Perifericos de computadosres '},
+      {id: 2, nome_categoria: 'Hardware', descricao_categoria: 'Para montar computadores '},
+      {id: 3, nome_categoria: 'Computadores ', descricao_categoria: 'Computadores completos'},
+      {id: 1, nome_categoria: 'Games', descricao_categoria: 'Acessórios para games'},
+   ];
+   let listaDeSituacao = [
+
+      {id:1, situacao: 'Novo'},
+      {id:2, situacao: 'Semi-novo'},
+   ];
+
+let listaDeCores = [
+   {id: 1, cor: 'Branco'},
+   {id: 2, cor: 'Preto'},
+   {id: 3, cor: 'Cinza'},
+   {id: 4, cor: 'Rosa'},
+   {id: 5, cor: 'Verde musgo'},
+]
+
+   let produto1 = {
+      nome: 'Mouse', 
+      descricaco: 'Mouse optico com fio', 
+      quantidade: 40, 
+      valor:60.00,
+      maraca:listaDeMarcas[0],
+      categoria: listaDeCategorias[0],
+      situacao: listaDeSituacao[0],
+      cor: [
+         listaDeCores[0],
+         listaDeCores[1],
+         listaDeCategorias[2]
+      ]
+    
+
+   };
+
+console.log(produto1);
+
+let produto2 = {
+   nome: 'Teclado', 
+   descricaco: 'Teclado com fio ', 
+   quantidade: 40, 
+   valor:60.00,
+   maraca:listaDeMarcas[2],
+   categoria: listaDeCategorias[1],
+   situacao: listaDeSituacao[2],
+   cor: listaDeCores
+ 
+
+};
+
+console.log(produto2);
+
+}
+
+cadastrarProdutos();
